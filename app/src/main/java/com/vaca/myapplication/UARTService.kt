@@ -34,7 +34,7 @@ class UARTService : Service() {
         executor = Executors.newCachedThreadPool()
         try {
             CarInfoPort = SerialPort(
-                File("/dev/ttyS1"),
+                File("/dev/ttyMT0"),
                 115200, 0
             )
             CarInfoUtils = ReceiveComUtils(CarInfoPort, carInfoReceive)
